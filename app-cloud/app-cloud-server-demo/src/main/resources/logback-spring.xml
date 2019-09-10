@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="10 seconds">
+    <contextName>app-cloud-server-demo</contextName>
+    <property name="log.path" value="./logs/logback.log"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <pattern>[%X{requestId}] %d{MM-dd HH:mm:ss.SSS} [%thread] [%X{requestUrl}] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--测试\生成环境-->
+    <springProfile name="!dev">
+        <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${log.path}</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- 每天一归档 -->
+                <fileNamePattern>${log.path}.%d{yyyy-MM-dd}.%i.zip</fileNamePattern>
+                <MaxHistory>15</MaxHistory>
+                <maxFileSize>500MB</maxFileSize>
+                <totalSizeCap>10GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <pattern>[%X{requestId}] %d{MM-dd HH:mm:ss.SSS} [%thread] [%X{requestUrl}] %-5level %logger{36} - %msg%n</pattern>
+            </encoder>
+        </appender>
+        <!-- 日志级别 -->
+        <root>
+            <level value="info"/>
+            <appender-ref ref="console"/>
+            <appender-ref ref="file"/>
+        </root>
+
+        <logger name="com.vma" additivity="false">
+            <level value="debug"/>
+            <appender-ref ref="file"/>
+            <appender-ref ref="console"/>
+        </logger>
+
+        <logger name="org.springframework" additivity="false">
+            <level value="error"/>
+            <appender-ref ref="file"/>
+            <appender-ref ref="console"/>
+        </logger>
+
+    </springProfile>
+
+    <!--开发环境-->
+    <springProfile name="dev">
+        <!-- 日志级别 -->
+        <root>
+            <level value="info"/>
+            <appender-ref ref="console"/>
+        </root>
+
+        <logger name="com.vma" additivity="false">
+            <level value="debug"/>
+            <appender-ref ref="console"/>
+        </logger>
+
+        <logger name="org.springframework" additivity="false">
+            <level value="error"/>
+            <appender-ref ref="console"/>
+        </logger>
+
+    </springProfile>
+
+</configuration>

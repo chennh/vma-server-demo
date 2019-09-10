@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.vma.api</groupId>
+        <artifactId>vma-api-build-cloud-server-parent</artifactId>
+        <version>1.2.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>app-cloud-server-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <dependencies>
+
+		<dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>app-cloud-service-demo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>app-config-demo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>vma-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>vma-cloud</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>vma-cloud-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>vma-authorization</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
+            <artifactId>vma-logger</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>app-cloud-server-demo</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>com.vma.CloudServerApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

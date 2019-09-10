@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.vma.api</groupId>
+    <artifactId>vma-server-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>app-model/app-model-xxx-demo</module>
+        <module>app-web/app-web-demo</module>
+        <module>app-business/app-business-service-demo</module>
+        <module>app-business/app-business-gateway-demo</module>
+        <module>app-cloud/app-cloud-service-demo</module>
+        <module>app-cloud/app-cloud-server-demo</module>
+        <module>app-cloud/app-cloud-client-demo</module>
+        <module>app-task/app-task-demo</module>
+        <module>app-common/app-common-demo</module>
+        <module>app-common/app-common-business-demo</module>
+        <module>app-common/app-common-cloud-demo</module>
+        <module>app-config/app-config-demo</module>
+    </modules>
+
+
+</project>
