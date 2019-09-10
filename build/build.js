@@ -1,7 +1,7 @@
 let path = require('path')
 let utils = require('./utils')
 
-const targetProjectName = 'rpa'
+const targetProjectName = '{{projectName}}'
 const excludeRegs = [
   // IDEA配置文件
   /.iml$/,
