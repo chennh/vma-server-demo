@@ -48,7 +48,7 @@ const fileHandles = {
 }
 
 // copy工程
-let files = utils.copyProject(path.resolve('../../vma-server-demo'), path.resolve('./dist'), excludeRegs, file => {
+let files = utils.copyProject(path.resolve('../../vma-server-demo'), path.resolve('{{dist}}'), excludeRegs, file => {
   // 替换工程名
   file = file.replace(/vma-server-demo/, `vma-server-${targetProjectName}`)
   // 替换项目名
