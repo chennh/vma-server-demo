@@ -10,7 +10,7 @@ const excludeRegs = [
   // 所有隐藏文件
   /\/\./,
   // build目录
-  /vma-server-demo\/build/
+  /\/build\//
 ]
 const projectNames = {
   'vma-server-demo': `vma-server-${targetProjectName}`,
