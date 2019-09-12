@@ -80,7 +80,7 @@ module.exports = {
     let sourceDirParent = path.dirname(sourceDir)
     let sourceFiles = loopFiles(sourceDir, excludeRegs)
     if (excludeRegs && excludeRegs.length) {
-      sourceFiles = sourceFiles.map(file => file.replace(sourceDirParent, ''))
+      sourceFiles = sourceFiles.map(file => file.replace(sourceDir, ''))
     }
     if (!fs.existsSync(targetDir)) {
       fs.mkdirSync(targetDir)
@@ -90,7 +90,7 @@ module.exports = {
 
     return sourceFiles.map(file => {
       let targetFile = targetDir + targetFileHandle(file)
-      copyFile(sourceDirParent + file, targetFile)
+      copyFile(sourceDir + file, targetFile)
       return targetFile
     })
   },
