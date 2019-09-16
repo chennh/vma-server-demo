@@ -2,6 +2,7 @@ let path = require('path')
 let utils = require('./utils')
 
 const targetProjectName = '{{projectName}}'
+const dbName = '{{dbName}}'
 const excludeRegs = [
   // IDEA配置文件
   /.iml$/,
@@ -14,7 +15,7 @@ const excludeRegs = [
 ]
 const projectNames = {
   'vma-server-demo': `vma-server-${targetProjectName}`,
-  'app-model-xxx-demo': `app-model-xxx-${targetProjectName}`,
+  'app-model-xxx-demo': `app-model-${dbName}-${targetProjectName}`,
   'app-web-demo': `app-web-${targetProjectName}`,
   'app-business-service-demo': `app-business-service-${targetProjectName}`,
   'app-business-gateway-demo': `app-business-gateway-${targetProjectName}`,
