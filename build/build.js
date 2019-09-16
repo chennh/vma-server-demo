@@ -50,10 +50,15 @@ const fileHandles = {
 
 // copy工程
 let files = utils.copyProject(path.resolve('{{source}}'), path.resolve('{{dist}}'), excludeRegs, file => {
+  // 替换\ => /
+  file = file.replace(/\\/g, '/')
   // 替换工程名
   file = file.replace(/vma-server-demo/, `vma-server-${targetProjectName}`)
   // 替换项目名
-  file = file.replace(/(app-.+-)demo/, `$1${targetProjectName}`)
+  file = file.replace(/(app-.+-demo)/, (arg0) => {
+    let arr = arg0.split('/')
+    return arr[0] + '/' + projectNames[arr[1]]
+  })
   // 替换目录名
   file = file.replace(/(com\/vma\/)demo/, `$1${targetProjectName}`)
   return file
