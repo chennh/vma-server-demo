@@ -1,5 +1,6 @@
 package com.vma.demo.cloud.client.config;
 
+import com.vma.core.config.VmaSwaggerConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -22,37 +23,16 @@ import java.util.List;
  */
 @EnableSwagger2
 @Configuration
-public class Swagger2 {
+public class Swagger2 extends VmaSwaggerConfig {
 
     /**
+     * manager rest api
+     *
      * @return Docket
      */
     @Bean
-    public Docket createRestApi() {
-
-        List<Parameter> pars = new ArrayList<>();
-        ParameterBuilder tokenPar = new ParameterBuilder();
-        tokenPar.name("macKey").description("密钥").modelRef(new ModelRef("string")).parameterType("header").required(false);
-        pars.add(tokenPar.build());
-
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.vma"))
-                .paths(PathSelectors.any())
-                .build().globalOperationParameters(pars);
-    }
-
-    /**
-     * @return ApiInfo
-     */
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("app端接口        app-business")
-                .description("接口文档")
-                .termsOfServiceUrl("")
-                .version("1.0")
-                .build();
+    public Docket createManagerRestApi() {
+        return createRestApiDoc("管理后台", "com.vma", "/manager/v1.0/**");
     }
 
 }

@@ -1,4 +1,4 @@
-package com.vma.demo.cloud.client.app.demo.controller;
+package com.vma.demo.cloud.client.app.manager.demo.controller;
 
 import com.vma.demo.cloud.client.api.cloud.IDemoCloud;
 import io.swagger.annotations.Api;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "Cloud 测试类")
 @RestController
-@RequestMapping(value = "cloud")
+@RequestMapping(value = "/manager/v1.0/demo")
 public class DemoController {
 
     @Autowired
