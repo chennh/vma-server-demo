@@ -1,11 +1,4 @@
-server:
-  port: 51001
-server-ip: 127.0.0.1
 spring:
-  profiles:
-    active: dev
-  application:
-    name: app-business-gateway-demo
   boot:
     admin:
       client:
@@ -34,11 +27,3 @@ management:
 logging:
   level:
     root: info
-vma:
-  resource:
-    upload:
-      qiniu:
-        access-key: -V2tA9xmyVKb0GRkH_MrJJXbNwwn0PQDi29lNFip
-        secret-key: TRB4swL5N_kBCib_coKU3keHxN5ksAQMv5vQuiWD
-        bucket: keji
-        domain-url: https://keji-res.h5h5h5.cn
