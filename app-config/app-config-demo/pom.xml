@@ -15,9 +15,25 @@
 
     <properties>
         <build.filter>src/main/resources/config/application-config-${spring.profiles.active}.yml</build.filter>
-        <build.resource.exclude>config/application-config-*.yml</build.resource.exclude>
-        <vma-maven-plugin-resource.include>config/application-config.yml,config/application-config-${spring.profiles.active}.yml
-        </vma-maven-plugin-resource.include>
     </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>config/application-config-*.yml</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>config/application-config-${spring.profiles.active}.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 
 </project>

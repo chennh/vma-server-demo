@@ -1,9 +1,8 @@
-server:
-  port: 51001
-server-ip: 127.0.0.1
 spring:
   application:
     name: app-business-gateway-demo
+  profiles:
+    active: dev
 vma:
   resource:
     upload:
