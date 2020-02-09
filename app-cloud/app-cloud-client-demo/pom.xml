@@ -43,26 +43,6 @@
                     <mainClass>com.vma.CloudClientApplication</mainClass>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>net.roseboy</groupId>
-                <artifactId>classfinal-maven-plugin</artifactId>
-                <version>1.1.8</version>
-                <configuration>
-                    <password>vmakj888</password><!--加密打包之后pom.xml会被删除，不用担心在jar包里找到此密码-->
-                    <packages>com.vma</packages>
-                    <cfgfiles>config/application.yml</cfgfiles>
-                    <excludes>org.spring</excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>classFinal</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
