@@ -55,7 +55,7 @@ let files = utils.copyProject(path.resolve('{{source}}'), path.resolve('{{dist}}
   // 替换工程名
   file = file.replace(/vma-server-demo/, `vma-server-${targetProjectName}`)
   // 替换项目名
-  file = file.replace(/(app-.+-demo)/, (arg0) => {
+  file = file.replace(/((app|server)-.+-demo)/, (arg0) = > {
     let arr = arg0.split('/')
     return arr[0] + '/' + projectNames[arr[1]]
   })
