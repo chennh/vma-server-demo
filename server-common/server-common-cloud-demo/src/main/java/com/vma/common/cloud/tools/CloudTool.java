@@ -1,4 +1,4 @@
-package com.vma.common.tools;
+package com.vma.common.cloud.tools;
 
 /**
  * DESCRIPTION
