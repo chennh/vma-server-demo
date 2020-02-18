@@ -15,18 +15,18 @@ const excludeRegs = [
 ]
 const projectNames = {
   'vma-server-demo': `vma-server-${targetProjectName}`,
-  'app-model-xxx-demo': `app-model-${dbName}-${targetProjectName}`,
+  'server-model-xxx-demo': `server-model-${dbName}-${targetProjectName}`,
   'app-web-demo': `app-web-${targetProjectName}`,
   'app-business-service-demo': `app-business-service-${targetProjectName}`,
   'app-business-gateway-demo': `app-business-gateway-${targetProjectName}`,
   'app-cloud-service-demo': `app-cloud-service-${targetProjectName}`,
   'app-cloud-server-demo': `app-cloud-server-${targetProjectName}`,
   'app-cloud-client-demo': `app-cloud-client-${targetProjectName}`,
-  'app-task-demo': `app-task-${targetProjectName}`,
-  'app-common-demo': `app-common-${targetProjectName}`,
-  'app-common-business-demo': `app-common-business-${targetProjectName}`,
-  'app-common-cloud-demo': `app-common-cloud-${targetProjectName}`,
-  'app-config-demo': `app-config-${targetProjectName}`
+  'server-task-demo': `server-task-${targetProjectName}`,
+  'server-common-demo': `server-common-${targetProjectName}`,
+  'server-common-business-demo': `server-common-business-${targetProjectName}`,
+  'server-common-cloud-demo': `server-common-cloud-${targetProjectName}`,
+  'server-config-demo': `server-config-${targetProjectName}`
 }
 
 class FileHandle {
