@@ -1,6 +1,7 @@
 package com.vma.demo.service.config;
 
-import com.vma.assist.wraps.SpringYmlConfigWrap;
+import com.vma.assist.global.globalenum.GlobalOrderConstant;
+import com.vma.assist.wraps.SpringYmlConfigLoadWrap;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
@@ -39,7 +40,7 @@ public class ApplicationEnvironListener implements
 
     @Override
     public void contextPrepared(ConfigurableApplicationContext context) {
-        SpringYmlConfigWrap.loadYmlConfig(context, "config/application-service.yml");
+        SpringYmlConfigLoadWrap.loadYmlConfigAfterFlag(context, "config/application-service.yml");
     }
 
     @Override
@@ -60,7 +61,7 @@ public class ApplicationEnvironListener implements
 
     @Override
     public int getOrder() {
-        return 11;
+        return GlobalOrderConstant.APP_SERVICE;
     }
 
 }

@@ -1,7 +1,8 @@
 package com.vma.config;
 
+import com.vma.assist.global.globalenum.GlobalOrderConstant;
 import com.vma.assist.wraps.LogWrap;
-import com.vma.assist.wraps.SpringYmlConfigWrap;
+import com.vma.assist.wraps.SpringYmlConfigLoadWrap;
 import org.slf4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
@@ -36,7 +37,7 @@ public class ApplicationEnvironListener implements
 
     @Override
     public void contextPrepared(ConfigurableApplicationContext context) {
-        SpringYmlConfigWrap.loadYmlAndProfileConfig(context, "config/application-config.yml");
+        SpringYmlConfigLoadWrap.loadYmlAndProfileConfigAfterFlag(context, "config/application-config.yml");
     }
 
     @Override
@@ -57,6 +58,6 @@ public class ApplicationEnvironListener implements
 
     @Override
     public int getOrder() {
-        return 12;
+        return GlobalOrderConstant.APP_CONFIG;
     }
 }

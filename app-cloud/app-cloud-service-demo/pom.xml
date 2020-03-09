@@ -23,6 +23,12 @@
 
         <dependency>
             <groupId>com.vma.api</groupId>
+            <artifactId>server-config-demo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vma.api</groupId>
             <artifactId>app-common-cloud-demo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

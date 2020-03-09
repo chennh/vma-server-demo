@@ -23,12 +23,6 @@
 
         <dependency>
             <groupId>com.vma.api</groupId>
-            <artifactId>app-config-demo</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vma.api</groupId>
             <artifactId>vma-core</artifactId>
         </dependency>
 
