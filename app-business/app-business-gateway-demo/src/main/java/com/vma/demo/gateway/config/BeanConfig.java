@@ -30,7 +30,7 @@ public class BeanConfig {
             }
 
             @Override
-            public void after(JoinPoint joinPoint, SystemLogger systemLogger) {
+            public void afterReturning(JoinPoint joinPoint, SystemLogger systemLogger) {
 
             }
 
