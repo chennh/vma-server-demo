@@ -1,8 +1,8 @@
 package com.vma.demo.gateway.config;
 
+import com.vma.authorization.interceptor.IAuthorizationInterceptor;
 import com.vma.core.config.VmaWebMvcConfig;
-import com.vma.demo.gateway.interceptor.AuthorizationInterceptor;
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 
@@ -15,20 +15,16 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 @Configuration
 public class WebMvcConfig extends VmaWebMvcConfig {
 
-
-    /**
-     * @return AuthorizationInterceptor
-     */
-    @Bean
-    public AuthorizationInterceptor authorizationInterceptor() {
-        return new AuthorizationInterceptor();
-    }
-
+    @Autowired
+    private IAuthorizationInterceptor authorizationInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         super.addInterceptors(registry);
-        registry.addInterceptor(authorizationInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(
+                authorizationInterceptor.addExcludeMethod("options")
+                        .addPathPattern("/system/**", () -> true))
+                .addPathPatterns("/**");
     }
 
 }
