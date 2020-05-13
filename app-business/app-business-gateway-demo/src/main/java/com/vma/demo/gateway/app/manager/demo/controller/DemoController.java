@@ -2,7 +2,7 @@ package com.vma.demo.gateway.app.manager.demo.controller;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.vma.assist.wraps.BeanWrap;
-import com.vma.demo.gateway.app.manager.demo.dto.DemoDTO;
+import com.vma.demo.gateway.app.manager.demo.domain.dto.DemoDTO;
 import com.vma.demo.service.business.demo.service.IDemoService;
 import com.vma.model.xxx.demo.domain.entity.Demo;
 import com.vma.redis.utils.RedisTemplateUtils;
