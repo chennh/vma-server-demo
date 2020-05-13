@@ -1,4 +1,4 @@
-package com.vma.demo.gateway.app.manager.demo.domain.dto;
+package com.vma.demo.gateway.app.manager.demo.domain.req;
 
 import com.vma.core.mvc.dto.PageDTO;
 import io.swagger.annotations.ApiModel;
@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 @ApiModel
-public class DemoDTO extends PageDTO {
+public class DemoReq extends PageDTO {
 
     /**
      * 通过注解实现数据校验

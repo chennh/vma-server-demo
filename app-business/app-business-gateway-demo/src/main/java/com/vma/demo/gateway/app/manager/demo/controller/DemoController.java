@@ -2,7 +2,8 @@ package com.vma.demo.gateway.app.manager.demo.controller;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.vma.assist.wraps.BeanWrap;
-import com.vma.demo.gateway.app.manager.demo.domain.dto.DemoDTO;
+import com.vma.demo.gateway.app.manager.demo.domain.req.DemoReq;
+import com.vma.demo.gateway.app.manager.demo.domain.resp.AnotherDemoResp;
 import com.vma.demo.service.business.demo.service.IDemoService;
 import com.vma.model.xxx.demo.domain.entity.Demo;
 import com.vma.redis.utils.RedisTemplateUtils;
@@ -47,8 +48,9 @@ public class DemoController {
      */
     @ApiOperation(value = "分页获取列表", notes = "分页获取列表")
     @GetMapping
-    public Page<Demo> page(@Valid DemoDTO demoDTO) {
+    public Page<Demo> page(@Valid DemoReq demoDTO) {
         log.info("分页获取列表");
+        AnotherDemoResp vo = new AnotherDemoResp();
         return demoService.selectPage(new Page<>(demoDTO.getCurrent(), demoDTO.getSize()));
     }
 
@@ -59,7 +61,7 @@ public class DemoController {
      */
     @ApiOperation(value = "新增", notes = "新增")
     @PostMapping
-    public void addOtherInfo(@RequestBody DemoDTO demoDTO) {
+    public void addOtherInfo(@RequestBody DemoReq demoDTO) {
         log.info("新增");
         Demo demo = new Demo();
         BeanWrap.copyProperties(demoDTO, demo);
@@ -78,7 +80,7 @@ public class DemoController {
      */
     @ApiOperation(value = "编辑", notes = "编辑")
     @PutMapping
-    public void updateOtherInfo(@RequestBody DemoDTO demoDTO) {
+    public void updateOtherInfo(@RequestBody DemoReq demoDTO) {
         log.info("编辑");
         Demo demo = new Demo();
         BeanWrap.copyProperties(demoDTO, demo);
