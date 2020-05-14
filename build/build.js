@@ -61,6 +61,8 @@ let files = utils.copyProject(path.resolve('{{source}}'), path.resolve('{{dist}}
   })
   // 替换目录名
   file = file.replace(/(com\/vma\/)demo/, `$1${targetProjectName}`)
+  // 替换model名
+  file = file.replace(/(com\/vma\/model\/)xxx/, `$1${dbName}`)
   return file
 })
 

@@ -17,7 +17,7 @@
 
         <dependency>
             <groupId>com.vma.api</groupId>
-            <artifactId>app-model-xxx-demo</artifactId>
+            <artifactId>server-model-xxx-demo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
@@ -29,7 +29,7 @@
 
         <dependency>
             <groupId>com.vma.api</groupId>
-            <artifactId>app-common-business-demo</artifactId>
+            <artifactId>server-common-business-demo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
