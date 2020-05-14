@@ -43,7 +43,7 @@ class FileHandle {
 }
 const fileHandles = {
   // java文件
-  java: new FileHandle(file => /.java$/.test(file), text => text.replace(/com.vma.demo/igm, `com.vma.${targetProjectName}`)),
+  java: new FileHandle(file => /.java$/.test(file), text => text.replace(/com.vma.demo/igm, `com.vma.${targetProjectName}`).replace(/com.vma.model.xxx/igm, `com.vma.model.${dbName}`)),
   // Spring启动文件配置
   springFactories: new FileHandle(file => /spring.factories$/.test(file), text => text.replace(/com.vma.demo/igm, `com.vma.${targetProjectName}`))
 }
