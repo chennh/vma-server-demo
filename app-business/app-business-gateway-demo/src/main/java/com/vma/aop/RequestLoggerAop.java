@@ -1,4 +1,4 @@
-package com.vma.demo.gateway.aop;
+package com.vma.aop;
 
 import com.vma.core.mvc.logger.request.aop.helper.RequestLoggerHelper;
 import org.aspectj.lang.JoinPoint;

@@ -1,4 +1,4 @@
-package com.vma.demo.gateway.app.manager.demo.domain.req;
+package com.vma.demo.gateway.app.demo.domain.req;
 
 import com.vma.core.mvc.dto.PageDTO;
 import io.swagger.annotations.ApiModel;

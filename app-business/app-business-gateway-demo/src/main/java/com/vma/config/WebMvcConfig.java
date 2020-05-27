@@ -1,4 +1,4 @@
-package com.vma.demo.gateway.config;
+package com.vma.config;
 
 import com.vma.authorization.interceptor.IAuthorizationInterceptor;
 import com.vma.core.config.VmaWebMvcConfig;

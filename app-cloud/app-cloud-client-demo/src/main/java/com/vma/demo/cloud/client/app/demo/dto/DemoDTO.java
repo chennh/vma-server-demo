@@ -1,4 +1,4 @@
-package com.vma.demo.cloud.client.app.manager.demo.dto;
+package com.vma.demo.cloud.client.app.demo.dto;
 
 /**
  * @author huang

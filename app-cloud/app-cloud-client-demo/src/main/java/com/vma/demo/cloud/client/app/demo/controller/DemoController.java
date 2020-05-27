@@ -1,4 +1,4 @@
-package com.vma.demo.cloud.client.app.manager.demo.controller;
+package com.vma.demo.cloud.client.app.demo.controller;
 
 import com.vma.demo.cloud.client.api.cloud.IDemoCloud;
 import io.swagger.annotations.Api;

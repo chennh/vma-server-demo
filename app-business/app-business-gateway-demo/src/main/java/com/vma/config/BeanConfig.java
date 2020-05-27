@@ -1,4 +1,4 @@
-package com.vma.demo.gateway.config;
+package com.vma.config;
 
 import com.vma.logger.entity.SystemLogger;
 import com.vma.logger.service.ISystemLoggerService;

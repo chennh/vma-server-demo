@@ -1,4 +1,4 @@
-package com.vma.demo.cloud.client.config;
+package com.vma.config;
 
 import com.vma.core.config.VmaSwaggerConfig;
 import org.springframework.context.annotation.Bean;

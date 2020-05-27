@@ -1,4 +1,4 @@
-package com.vma.demo.gateway.app.manager.demo.domain.resp;
+package com.vma.demo.gateway.app.demo.domain.resp;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
