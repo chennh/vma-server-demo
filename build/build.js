@@ -43,19 +43,9 @@ class FileHandle {
 }
 const fileHandles = {
   // java文件
-  java: new FileHandle(file = > /.java$ /
-.
-test(file), text =
->
-text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`).replace(/com.vma.model.xxx/igm, `com.vma.model.${dbName}`)
-),
+  java: new FileHandle(file => /.java$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`).replace(/com.vma.model.xxx/igm, `com.vma.model.${dbName}`)),
   // Spring启动文件配置
-springFactories: new FileHandle(file = > / spring.factories$ /
-.
-test(file), text =
->
-text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`)
-)
+  springFactories: new FileHandle(file => /spring.factories$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`))
 }
 
 // copy工程
@@ -70,7 +60,7 @@ let files = utils.copyProject(path.resolve('{{source}}'), path.resolve('{{dist}}
     return arr[0] + '/' + projectNames[arr[1]]
   })
   // 替换目录名
-file = file.replace(/(com\/vma\/app\/)demo/, `$1${targetProjectName}`)
+  file = file.replace(/(com\/vma\/app\/)demo/, `$1${targetProjectName}`)
   // 替换model名
   file = file.replace(/(com\/vma\/model\/)xxx/, `$1${dbName}`)
   return file
