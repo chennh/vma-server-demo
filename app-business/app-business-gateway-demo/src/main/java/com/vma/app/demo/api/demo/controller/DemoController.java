@@ -28,7 +28,7 @@ import javax.validation.Valid;
 @Api(value = "DemoController", description = "相关", tags = {"DemoController"})
 @Validated
 @RestController
-@RequestMapping("/manager/v1.0/demo")
+@RequestMapping("/demo/app/v1.0/demo")
 @Slf4j
 public class DemoController {
 

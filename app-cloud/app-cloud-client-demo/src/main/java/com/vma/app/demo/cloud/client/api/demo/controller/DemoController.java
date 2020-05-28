@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "Cloud 测试类")
 @RestController
-@RequestMapping(value = "/manager/v1.0/demo")
+@RequestMapping(value = "/demo/app/v1.0/demo")
 public class DemoController {
 
     @Autowired
