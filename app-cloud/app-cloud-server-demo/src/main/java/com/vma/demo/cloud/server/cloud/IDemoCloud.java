@@ -1,4 +1,4 @@
-package com.vma.demo.cloud.server.api.cloud;
+package com.vma.demo.cloud.server.cloud;
 
 import com.vma.cloud.entity.CloudResponseReceiver;
 import org.springframework.cloud.openfeign.FeignClient;

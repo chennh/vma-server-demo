@@ -1,4 +1,4 @@
-package com.vma.demo.cloud.server.app.demo.dto;
+package com.vma.demo.cloud.server.api.demo.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

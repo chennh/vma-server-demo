@@ -1,6 +1,6 @@
-package com.vma.demo.cloud.server.app.demo.controller;
+package com.vma.demo.cloud.server.api.demo.controller;
 
-import com.vma.demo.cloud.server.api.cloud.IDemoCloud;
+import com.vma.demo.cloud.server.cloud.IDemoCloud;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

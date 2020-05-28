@@ -1,9 +1,9 @@
-package com.vma.demo.gateway.app.demo.controller;
+package com.vma.demo.gateway.api.demo.controller;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.vma.assist.wraps.BeanWrap;
-import com.vma.demo.gateway.app.demo.domain.req.DemoReq;
-import com.vma.demo.gateway.app.demo.domain.resp.AnotherDemoResp;
+import com.vma.demo.gateway.api.demo.domain.req.DemoReq;
+import com.vma.demo.gateway.api.demo.domain.resp.AnotherDemoResp;
 import com.vma.demo.service.business.demo.service.IDemoService;
 import com.vma.model.xxx.demo.domain.entity.Demo;
 import com.vma.redis.utils.RedisTemplateUtils;
