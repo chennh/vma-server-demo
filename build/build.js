@@ -47,7 +47,10 @@ const fileHandles = {
   // Spring启动文件配置
   springFactories: new FileHandle(file => /spring\.factories$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`)),
   // mapper
-  mapper: new FileHandle(file => /mapper\/.+\.xml$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`))
+  mapper: new FileHandle(file => {
+    console.log(file, /mapper\/.+\.xml$/.test(file))
+    return /mapper\/.+\.xml$/.test(file)
+  }, text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`))
 }
 
 // copy工程
