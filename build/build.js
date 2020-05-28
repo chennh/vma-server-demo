@@ -43,11 +43,11 @@ class FileHandle {
 }
 const fileHandles = {
   // java文件
-  java: new FileHandle(file => /\.java$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`).replace(/com.vma.model.xxx/igm, `com.vma.model.${dbName}`)),
+  java: new FileHandle(file => /\.java$/.test(file), text => text.replace(/com\.vma\.app\.demo/igm, `com.vma.app.${targetProjectName}`).replace(/com\.vma\.model\.xxx/igm, `com.vma.model.${dbName}`)),
   // Spring启动文件配置
-  springFactories: new FileHandle(file => /spring\.factories$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`)),
+  springFactories: new FileHandle(file => /spring\.factories$/.test(file), text => text.replace(/com\.vma\.app\.demo/igm, `com.vma.app.${targetProjectName}`)),
   // mapper
-  mapper: new FileHandle(file => /mapper\/.+\.xml$/.test(file), text => text.replace(/com.vma.app.demo/igm, `com.vma.app.${targetProjectName}`))
+  mapper: new FileHandle(file => /mapper\/.+\.xml$/.test(file), text => text.replace(/com\.vma\.app\.demo/igm, `com.vma.app.${targetProjectName}`).replace(/com\.vma\.model\.xxx/igm, `com.vma.model.${dbName}`))
 }
 
 // copy工程
