@@ -18,7 +18,7 @@ public class RequestLoggerAop {
     /**
      * 拦截控制器
      */
-    @Pointcut("execution(* com.vma.app.demo..controller..*Controller.*(..))")
+    @Pointcut("execution(* com.vma.app..controller..*Controller.*(..))")
     public void webLog() {
     }
 
