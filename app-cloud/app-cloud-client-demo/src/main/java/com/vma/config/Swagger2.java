@@ -3,6 +3,7 @@ package com.vma.config;
 import com.vma.core.config.VmaSwaggerConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -13,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @EnableSwagger2
 @Configuration
+@Profile({"dev", "test"})
 public class Swagger2 extends VmaSwaggerConfig {
 
     /**

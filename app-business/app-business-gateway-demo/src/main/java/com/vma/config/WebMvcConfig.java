@@ -23,6 +23,7 @@ public class WebMvcConfig extends VmaWebMvcConfig {
         super.addInterceptors(registry);
         registry.addInterceptor(
                 authorizationInterceptor.addExcludeMethod("options")
+                        // authorization鉴权成功后执行，返回false则表示失败
                         .addPathPattern("/system/**", () -> true))
                 .addPathPatterns("/**")
                 .excludePathPatterns("/swagger-resources")
