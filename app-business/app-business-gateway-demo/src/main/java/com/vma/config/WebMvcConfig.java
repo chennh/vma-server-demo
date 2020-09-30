@@ -24,7 +24,9 @@ public class WebMvcConfig extends VmaWebMvcConfig {
         registry.addInterceptor(
                 authorizationInterceptor.addExcludeMethod("options")
                         .addPathPattern("/system/**", () -> true))
-                .addPathPatterns("/**");
+                .addPathPatterns("/**")
+                .excludePathPatterns("/swagger-resources")
+                .excludePathPatterns("/v2/api-docs");
     }
 
 }

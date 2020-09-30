@@ -31,7 +31,6 @@ public class ApplicationEnvironListener implements
 
     @Override
     public void starting() {
-        log.info("load vma-service");
     }
 
     @Override

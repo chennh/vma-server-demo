@@ -1,4 +1,4 @@
-package com.vma.app.demo.service.config;
+package com.vma.config;
 
 import com.vma.assist.global.globalenum.GlobalOrderConstant;
 import com.vma.assist.wraps.LogWrap;
