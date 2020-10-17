@@ -1,8 +1,8 @@
-package com.vma.app.demo.api.demo.controller;
+package com.vma.app.demo.api.system.demo.controller;
 
 import com.baomidou.mybatisplus.plugins.Page;
-import com.vma.app.demo.api.demo.domain.req.DemoReq;
-import com.vma.app.demo.api.demo.domain.resp.AnotherDemoResp;
+import com.vma.app.demo.api.system.demo.domain.req.DemoReq;
+import com.vma.app.demo.api.system.demo.domain.resp.AnotherDemoResp;
 import com.vma.app.demo.service.business.demo.service.IDemoService;
 import com.vma.assist.wraps.BeanWrap;
 import com.vma.model.xxx.demo.domain.entity.Demo;
@@ -28,7 +28,7 @@ import javax.validation.Valid;
 @Api(value = "DemoController", description = "相关", tags = {"DemoController"})
 @Validated
 @RestController
-@RequestMapping("/demo/app/v1.0/demo")
+@RequestMapping("/demo/system/v1.0/demo")
 @Slf4j
 public class DemoController {
 

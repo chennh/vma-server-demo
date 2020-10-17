@@ -6,6 +6,8 @@ spring:
 vma:
   resource:
     upload:
+      # 文件上传临时目录
+      templateUpload:
       qiniu:
         access-key: -V2tA9xmyVKb0GRkH_MrJJXbNwwn0PQDi29lNFip
         secret-key: TRB4swL5N_kBCib_coKU3keHxN5ksAQMv5vQuiWD
