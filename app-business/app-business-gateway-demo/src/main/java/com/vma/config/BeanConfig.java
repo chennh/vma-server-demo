@@ -7,6 +7,8 @@ import org.aspectj.lang.JoinPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Map;
+
 /**
  * DESCRIPTION
  *
@@ -37,6 +39,11 @@ public class BeanConfig {
             @Override
             public void afterThrowing(JoinPoint joinPoint, SystemLogger systemLogger) {
 
+            }
+
+            @Override
+            public Map<String, Object> globalParameterMap() {
+                return null;
             }
         });
     }
