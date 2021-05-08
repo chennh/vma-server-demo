@@ -1,13 +1,9 @@
 package com.vma.config;
 
-import com.vma.logger.entity.SystemLogger;
 import com.vma.logger.service.ISystemLoggerService;
 import com.vma.logger.service.impl.DaemonSystemLoggerServiceImpl;
-import org.aspectj.lang.JoinPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.Map;
 
 /**
  * DESCRIPTION
@@ -25,26 +21,6 @@ public class BeanConfig {
      */
     @Bean
     public ISystemLoggerService systemLoggerService() {
-        return new DaemonSystemLoggerServiceImpl(new ISystemLoggerService() {
-            @Override
-            public void before(JoinPoint joinPoint, SystemLogger systemLogger) {
-
-            }
-
-            @Override
-            public void afterReturning(JoinPoint joinPoint, SystemLogger systemLogger) {
-
-            }
-
-            @Override
-            public void afterThrowing(JoinPoint joinPoint, SystemLogger systemLogger) {
-
-            }
-
-            @Override
-            public Map<String, Object> globalParameterMap() {
-                return null;
-            }
-        });
+        return new DaemonSystemLoggerServiceImpl(new AppSystemLogger());
     }
 }
