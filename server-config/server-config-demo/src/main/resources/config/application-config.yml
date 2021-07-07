@@ -1,5 +1,4 @@
 server:
-  ip: 127.0.0.1
   port: 51001
 logging:
   config: classpath:logback-spring.xml
@@ -12,3 +11,11 @@ logging:
     sun.net.www.protocol: info
     org.apache.catalina: info
     de.codecentric.boot: info
+spring:
+  profiles:
+    # 各应用中必须在application.yml中定义该配置，才会在启动时有效
+    active: dev
+app:
+  upload:
+    # 临时上传目录，各个应用需覆盖该地址
+    temp-dir:

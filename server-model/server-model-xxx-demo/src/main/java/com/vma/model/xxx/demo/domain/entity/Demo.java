@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-import com.vma.model.xxx.demo.domain.table.DemoTable;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

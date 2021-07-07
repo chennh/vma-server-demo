@@ -1,1 +1,2 @@
 org.springframework.boot.SpringApplicationRunListener=com.vma.config.ApplicationEnvironListener
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.vma.config.ConfigAutoConfigure

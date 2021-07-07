@@ -8,3 +8,13 @@ spring:
     port: 63790
     password: 471640241
     database: 0
+logging:
+  level:
+    root: warn
+    org.apache.tomcat: warn
+    org.apache.coyote: warn
+    org.apache.coyote.http11.Http11Processor: warn
+    org.apache.http: warn
+    sun.net.www.protocol: warn
+    org.apache.catalina: warn
+    de.codecentric.boot: warn

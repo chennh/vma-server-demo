@@ -1,4 +1,4 @@
-package com.vma.model.xxx.demo.domain.table;
+package com.vma.model.xxx.demo.domain.entity;
 
 /**
  * DESCRIPTION
